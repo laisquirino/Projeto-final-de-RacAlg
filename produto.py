@@ -1,4 +1,6 @@
-estoque = {}
+from persistencia import carregar
+
+estoque = carregar()
 
 def cadastrar_produto(codigo, nome, categoria, tamanho, preco, quantidade):
     if codigo in estoque:
