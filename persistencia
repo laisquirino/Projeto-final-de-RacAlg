@@ -1,0 +1,15 @@
+import pickle
+import os
+
+ARQUIVO = "estoque.pkl"
+
+def salvar(dados):
+    with open(ARQUIVO, "wb") as arquivo:
+        pickle.dump(dados, arquivo)
+
+def carregar():
+    if os.path.exists(ARQUIVO):
+        with open(ARQUIVO, "rb") as arquivo:
+            return pickle.load(arquivo)
+
+    return {}
